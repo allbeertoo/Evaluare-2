@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentare Resurse de Calcul</title>
+    <link rel="stylesheet" type="text/css" href="stiluri.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+			border:2px solid #000010;
+        }
+        th, td {
+            border: 2px solid #000010;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: rgb(0, 255, 127);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+		
+		
+		
+		
+        .network-structure {
+            border: 2px solid #ff0000;
+            padding:15px;
+            margin-top: 20px;
+			background-color: #00bcd4;
+			
+        }
+        .network-structure img {
+            width: 20%;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+<style>
+    
+
+    header {
+        background-color: #00bcd4; 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        text-align: center;
+    }
+
+    .name-box {
+        background-color: #00bcd4; 
+        padding: 10px; 
+        border-radius: 10px; 
+        display: inline-block;
+    }
+
+    h1 {
+        margin: 0; 
+    }
+</style>
+
+
+<header>
+    <div class="name-box">
+        <h1>Hatos Vasile Alberto</h1>
+    </div>
+   <h2><a href="mailto:ojb_ojb@yahoo.com">ojb_ojb@yahoo.com</a></h2>
+</header>
+
+ 
+    <section>
+        <h2>Specificații tehnice ale stației principale de lucru</h2>
+        <table>
+            <tr>
+                <th>Denumire componentă</th>
+                <th>Parametri</th>
+                <th>Producător</th>
+            </tr>
+            <tr>
+                <td>Procesor:</td>
+                <td>Model procesor: Ryzen 7 (5000 SERIES)</td>
+                <td>Producător procesor: AMD</td>
+            </tr>
+            <tr>
+                <td>Memorie RAM:</td>
+                <td>Capacitate RAM: 16GB</td>
+                <td>Producător RAM: Samsung</td>
+            </tr>
+            <tr>
+                <td>Stocare</td>
+                <td>Capacitate stocare: 512GB</td>
+                <td>Producător unitate de stocare: Samsung</td>
+            </tr>
+            <tr>
+                <td>Placă video:</td>
+                <td>Model placă video: RTX 3050TI</td>
+                <td>Producător placă video: nVidia GeForce</td>
+            </tr>
+        </table>
+    </section>
+
+  
+    <section class="network-structure">
+        <h2>Structura rețelei personale și accesul la internet</h2>
+		<img src="C:\Users\ojb_o\OneDrive\Desktop\Hatos_Alberto\imagini\computer-lan-network.jpg" alt="Structura rețelei personale" />
+        <p>Caracteristicile conexiunii la retea:</p>
+        <p>Adresa MAC:
+            90-2E-16-B7-67-9D   
+            B4-B5-B6-EA-7B-25   
+            B4-B5-B6-EA-7B-26   
+            00-FF-A6-0B-D1-27  
+            0A-00-27-00-00-07   
+            0A-00-27-00-00-14
+        </p>
+        <p>Adresa IP: 192.168.200.169</p>
+        <p>Debit la upload: 25 mbps</p>
+        <p>Debit de download: 14 mbps</p>
+    </section>
+
+    <!-- Aici -->
+<section>
+    <h3>Utilizarea resurselor (slideshow)</h3>
+    <div id="slideshow-container">
+        <div id="image-container-1"></div>
+        <div id="image-container-2"></div>
+    </div>
+</section>
+
+<style>
+    #slideshow-container {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #image-container-1,
+    #image-container-2 {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        width: 30%; 
+        margin-right: 10px; 
+    }
+
+    #image-container-1 img,
+    #image-container-2 img {
+        width: 100%; 
+        border-radius: 10px;
+    }
+</style>
+
+<script>
+    var imaginiSlideshow1 = [
+        "C:\\Users\\ojb_o\\OneDrive\\Desktop\\Hatos_Alberto\\imagini\\Screenshot 2023-12-04 192136.png",
+        "C:\\Users\\ojb_o\\OneDrive\\Desktop\\Hatos_Alberto\\imagini\\Screenshot 2023-12-04 192225.png",
+    ];
+
+    var imaginiSlideshow2 = [
+        "C:\\Users\\ojb_o\\OneDrive\\Desktop\\Hatos_Alberto\\imagini\\Screenshot 2023-12-04 192225.png",
+		 "C:\\Users\\ojb_o\\OneDrive\\Desktop\\Hatos_Alberto\\imagini\\Screenshot 2023-12-04 192136.png",
+    ];
+
+    var indexImagine1 = 0;
+    var indexImagine2 = 0;
+    var timpTranzitie = 3000; // 3 secunde
+
+    function startSlideshow() {
+        setInterval(afiseazaUrmatoareaImagine1, timpTranzitie);
+        setInterval(afiseazaUrmatoareaImagine2, timpTranzitie);
+    }
+
+    function afiseazaUrmatoareaImagine1() {
+        var containerImagini = document.getElementById("image-container-1");
+        containerImagini.innerHTML = "<img src='" + imaginiSlideshow1[indexImagine1] + "' alt='Imagine slideshow 1'>";
+
+        indexImagine1++;
+        if (indexImagine1 === imaginiSlideshow1.length) {
+            indexImagine1 = 0;
+        }
+    }
+
+    function afiseazaUrmatoareaImagine2() {
+        var containerImagini = document.getElementById("image-container-2");
+        containerImagini.innerHTML = "<img src='" + imaginiSlideshow2[indexImagine2] + "' alt='Imagine slideshow 2'>";
+
+        indexImagine2++;
+        if (indexImagine2 === imaginiSlideshow2.length) {
+            indexImagine2 = 0;
+        }
+    }
+
+    startSlideshow();
+</script>
+</section>
+
+   
+    <footer>
+  
+    </footer>
+
+</body>
+</html>

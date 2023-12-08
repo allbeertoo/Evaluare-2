@@ -1,0 +1,72 @@
+<style>
+    header h1, header h2, section h2, h3, footer {
+        font-family: "Arial", sans-serif;
+        color: #333; 
+        margin-bottom: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: rgb(0, 255, 127); 
+    }
+
+    
+
+    #slideshow-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #slideshow-container img {
+        width: 30%; /* sau orice altă valoare pentru a regla dimensiunile imaginilor */
+        border-radius: 10px;
+        margin-right: 10px; 
+    }
+
+    section h3, section p {
+        margin-bottom: 10px;
+        color: #555; 
+    }
+
+    .network-structure img {
+        width: 50%;
+        height: auto; 
+        border-radius: 10px;
+    }
+
+    .network-info-box {
+        border: 2px solid #ff0000; 
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .network-info-box img {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+
+    .connection-details {
+        flex: 1; 
+    }
+
+    body {
+        background-color: rgb(0, 255, 127); 
+        margin: 20px;
+    }
+</style>
